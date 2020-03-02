@@ -10,12 +10,12 @@ module.exports = merge(common, {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
-      'process.env.BASE_URL': JSON.stringify('http://localhost:3000'),
-      'process.env.API_BASE_URL': JSON.stringify('http://localhost:8080/api')
+      'process.env.BASE_URL': JSON.stringify('http://localhost:3007'),
+      'process.env.API_BASE_URL': JSON.stringify('http://localhost:8009/api')
     })
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'static'),
+    contentBase: path.join(__dirname, './dist'),
     watchContentBase: true,
     historyApiFallback: true,
     headers: {

@@ -1,6 +1,6 @@
 /* eslint-disable */
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -19,7 +19,9 @@ module.exports = {
     publicPath: '/'
   },
   plugins: [
-    new CleanWebpackPlugin(['./client/dist']),
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['./client/dist']
+    }),
     new webpack.DefinePlugin({
       'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH)
     }),

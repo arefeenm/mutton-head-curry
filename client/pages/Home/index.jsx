@@ -2,6 +2,7 @@
 
 import React from 'react';
 import UserService from '../../services/User';
+// import './_index.scss'
 
 class Home extends React.Component {
   constructor(props) {

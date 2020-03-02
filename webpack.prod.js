@@ -36,7 +36,7 @@ module.exports = merge(common, {
     port: 3007,
     host: '0.0.0.0',
     disableHostCheck: true,
-    contentBase: path.join(__dirname, 'static'),
+    contentBase: path.join(__dirname, './dist'),
     historyApiFallback: true,
     headers: {
       'Access-Control-Allow-Origin': '*',
