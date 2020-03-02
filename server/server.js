@@ -72,7 +72,7 @@ server.listen(process.env.PORT || 8009, (err) => {
 
   mongoose.set('useFindAndModify', false);
 
-  mongoose.connect(DB_URL, { useNewUrlParser: true });
+  mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
   mongoose.connection.on('error', (_err) => {
     if (_err) { process.exit(1); }
