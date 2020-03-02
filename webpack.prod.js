@@ -33,7 +33,7 @@ module.exports = merge(common, {
       '*'
     ],
     public: '*',
-    port: 3000,
+    port: 3007,
     host: '0.0.0.0',
     disableHostCheck: true,
     contentBase: path.join(__dirname, 'static'),
