@@ -21,10 +21,8 @@ UserSchema.statics.login = (email, password, callback) => {
   User.findOne({ email }, (err, user) => {
     if (err) { return callback(err); }
     if (!user) { return callback(new Error('User with email not found!')); }
-    return bcrypt.compare(password, user.password, (_, result) => {
-      if (result) {
-        return callback(null, user);
-      }
+    return bcrypt.compare(password, user.password, (err, result) => {
+      if (result) { return callback(null, user); }
       return callback(new Error('Wrong password!'));
     });
   });
@@ -34,8 +32,8 @@ UserSchema.statics.signUp = (email, password, callback) => {
   User.findOne({ email }, (err, user) => {
     if (err) { return callback(err); }
     if (user) { return callback(new Error('User with email already exists!')); }
-    return bcrypt.hash(password, 10, (error, hash) => {
-      if (error) { return callback(error); }
+    return bcrypt.hash(password, 10, (err, hash) => {
+      if (err) { return callback(err); }
       return User.create({
         email,
         password: hash
