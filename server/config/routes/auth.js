@@ -1,3 +1,5 @@
+'use strict';
+
 const auth = require('../../auth');
 const authenticator = require('../middlewares/authenticator');
 

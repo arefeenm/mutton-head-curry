@@ -1,3 +1,5 @@
+'use strict';
+
 /* eslint-disable no-use-before-define */
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');

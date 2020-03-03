@@ -1,3 +1,5 @@
+'use strict';
+
 const authenticator = require('../middlewares/authenticator');
 const User = require('../../user');
 const utils = require('../../utils');
