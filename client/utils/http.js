@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const instance = axios.create({ baseURL: process.env.API_BASE_URL });
+const instance = axios.create({ baseURL: process.env.API_BASE_URL, withCredentials: true  });
 
 // SessionExpirationInterceptor
 instance.interceptors.response.use(null, (rejection) => {
