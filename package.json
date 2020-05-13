@@ -8,7 +8,9 @@
     "start": "npm run build && node server/server.js",
     "client": "webpack-dev-server --config webpack.dev.js",
     "server": "nodemon server/server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev-server": "NODE_ENV=development nodemon server/server.js",
+    "dev-start": "webpack-dev-server --config webpack.dev.js"
   },
   "dependencies": {
     "axios": "^0.19.2",
