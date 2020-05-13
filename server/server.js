@@ -30,7 +30,7 @@ app.options('*', cors());
 const router = express.Router();
 app.use(router);
 
-const DB_URL = 'mongodb://localhost:27017/mutton-head-curry'; // Replace with your database name
+const DB_URL = 'mongodb://localhost:27017/grabfunding'; // Replace with your database name
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

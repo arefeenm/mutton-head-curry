@@ -20,8 +20,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home">
-        <h1>Mutton Head Curry</h1>
-        <h5>A Node and React boilerplate</h5>
+        <h1>grabfunding</h1>
       </div>
     );
   }

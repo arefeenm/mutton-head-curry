@@ -8,7 +8,7 @@ function Header() {
       <nav className="navbar navbar-default">
         <div className="container-fluid">
           <div className="navbar-header">
-            <p className="navbar-text">Mutton Head Curry</p>
+            <p className="navbar-text">grabfunding</p>
           </div>
         </div>
       </nav>
