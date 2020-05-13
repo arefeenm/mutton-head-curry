@@ -1,6 +1,7 @@
 'use strict';
 
 import axios from 'axios';
+import _ from 'lodash';
 
 const instance = axios.create({ baseURL: process.env.API_BASE_URL, withCredentials: true  });
 

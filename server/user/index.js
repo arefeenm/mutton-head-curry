@@ -28,8 +28,11 @@ async function get(req, res) {
 }
 
 async function getCurrentUser(req, res) {
-  const currentUser = await User.findById(req.session.user._id);
-  return res.status(200).send(currentUser);
+  if (!req.session || !req.session.user) { return res.status(200).send(null); }
+  else {
+    const user = await User.findById(req.session.user._id);
+    return res.status(200).send(user);
+  }
 }
 
 module.exports = {

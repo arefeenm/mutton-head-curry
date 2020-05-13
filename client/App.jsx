@@ -6,6 +6,7 @@ import './app.scss';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Header from './components/Header';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/register" component={Register} />
         </Switch>
       </BrowserRouter>
     </React.Fragment>
